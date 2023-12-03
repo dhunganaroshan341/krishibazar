@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<navbar>
+  <logo>
+    <img>logo.png</img>
+    <text>Krishi Bazar</text>
+  </logo>
+
+  <menu>
+    <item>
+      <name>Home</name>
+      <link>index.php</link>
+    </item>
+    <item>  
+      <name>Farmers</name>
+      <link>farmers.php</link>
+    </item>
+    <item>
+      <name>Vendors</name>
+      <link>vendors.php</link>  
+    </item>
+    <item>
+      <name>Products</name>
+      <link>products.php</link>
+    </item>
+    <item>
+      <name>Orders</name>
+      <link>orders.php</link>
+    </item>
+    <item>  
+      <name>Settings</name>
+      <link>settings.php</link>
+    </item>
+  </menu>
+  
+</navbar>
