@@ -34,7 +34,7 @@ include_once "COMPONENTS/productgrid/enlargelayout.php";
 
 
 
-
+<?php include_once "COMPONENTS/footer.php";?>
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
