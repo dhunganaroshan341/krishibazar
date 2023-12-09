@@ -3,7 +3,7 @@
 
 include_once "path.php";  
 include_once NAVBAR_LINKS;
-
+include_once DATABASE."/fetch_product_enlarge.php";
 // Adding the logo to the beginning of the $links array
 
 

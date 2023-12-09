@@ -1,17 +1,24 @@
-<div class="product">
-    <div class="product-image">
-        <img src="media/product-images/cauliflower.jpeg"     alt="Product Image">
-    </div>
-    <div class="product-info">
-        <h3 class="product-title">Caulilflower</h3>
-        <p class="bg-warning quantity">300</p>
-        <label for="quantity" class="quantity_measurement">kg</label>
-        <p class="product-price">$99.99</p>
-        <button class="bg-success add-to-cart">buy Now</button>
-        <button class="add-to-cart">Add to Cart</button>
 
-    </div>
+<div class="product">
+  <div class="product-image">
+    <img src="<?php echo $image; ?>" alt="<?php echo $name; ?>">
+  </div>
+  
+  <div class="product-info">
+    <h3 class="product-title"><?php echo $name; ?></h3>  
+    <p class="bg-warning quantity"><?php echo $quantity; ?></p>
+    <label for="quantity" class="quantity_measurement">kg</label>
+    <p class="product-price">$<?php echo $price; ?></p>
+    
+    <button class="bg-success add-to-cart">Buy Now</button>
+    <button class="add-to-cart">Add to Cart</button>
+  </div>
 </div>
+
+<?php
+  }
+}
+?>
 
 
 <style>
