@@ -15,7 +15,13 @@
                     <span class="nav-link">No links available</span>
                 </li>
             <?php endif; ?>
-           <input type="text" name="searchbar" id="searchbar" placeholder = "search -products">
+          
+           <?php
+           if (basename($_SERVER['PHP_SELF']) !== 'farmer.php') {
+            echo ' <input type="text" name="searchbar" id="searchbar" placeholder = "search -products">';
+        }
+           
+           ?>
         </ul>
     </div>
 </nav>

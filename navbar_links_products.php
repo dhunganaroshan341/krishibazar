@@ -26,7 +26,7 @@ $links = array(
     ),
     array(
         'url' => FARMER_PAGE, // Replace with the URL for your farmers page
-        'name' => 'Farmers'
+        'name' => 'Add_new+'
     ),
     array(
         'url' => SETTINGS_PAGE, // Replace with the URL for your settings page

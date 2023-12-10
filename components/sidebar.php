@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
+
 
   <!-- Bootstrap CSS link -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -35,11 +30,9 @@
       background-color: #218838; /* Darker green on hover */
     }
   </style>
-</head>
-<body>
 
   <div class="sidebar">
-    <a href="#">Upload new</a>
+    <a href="" class="sidebar-link" data-target="../productgrid/sellproducts.php">upload new</a>
     <a href="#">Set producer</a>
     <a href="#">existing</a>
     <a href="#">Detail</a>
@@ -49,15 +42,36 @@
   </div>
 
   <!-- Your website content goes here -->
-  <div class="content">
-    <h1>Your Content</h1>
-    <p>This is your main content area.</p>
-  </div>
+
 
   <!-- Bootstrap JS and Popper.js scripts (optional but often used) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  <div class="container" id="container">
+  <?php  
+    include_once SIDEBAR_FARMER;
+  ?>
 
-</body>
-</html>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.sidebar-link').click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        var targetComponent = $(this).data('target'); // Get the target PHP component
+        // AJAX request to load the target component content
+        $.ajax({
+            url: 'krishibazar/component/productgrid/' + targetComponent,
+            type: 'GET',
+            success: function(response) {
+                // Replace the content in the remaining side of the screen with the loaded component content
+                $('.remaining-side-content').html(response);
+            },
+            error: function() {
+                alert('Error loading content');
+            }
+        });
+    });
+});
+</script>

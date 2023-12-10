@@ -2,6 +2,7 @@
 <?php
 
 include_once "path.php";  
+include_once "super_path.php";
 include_once NAVBAR_LINKS;
 include_once DATABASE."/fetch_product_enlarge.php";
 // Adding the logo to the beginning of the $links array
@@ -26,7 +27,9 @@ include_once DATABASE."/fetch_product_enlarge.php";
 
 
 include_once "COMPONENTS/navbar.php";
+
 include_once "COMPONENTS/productgrid/showcaselayout.php";
+
 include_once "COMPONENTS/table/recent_table.php";
 include_once "COMPONENTS/productgrid/enlargelayout.php";
 

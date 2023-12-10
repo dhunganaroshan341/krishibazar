@@ -1,4 +1,4 @@
-
+<!--
 <div class="product">
   <div class="product-image">
     <img src="<?php echo $image; ?>" alt="<?php echo $name; ?>">
@@ -16,8 +16,7 @@
 </div>
 
 <?php
-  }
-}
+  
 ?>
 
 
@@ -66,3 +65,4 @@
 }
 
 </style>
+-->
