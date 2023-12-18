@@ -1,8 +1,7 @@
 <?php
-define ("BASE_URL","/krishibazar/");
+define ("BASE_URL", __DIR__."/");
 define("FARMER_PAGE",BASE_URL."farmer/farmer.php");
-
-define("SETTINGS_PAGE",BASE_URL."settings/settings.php");
+define("SETTINGS_PAGE","/krishibazar/settings/settings.php");
 define("ABOUT_PAGE",BASE_URL."about");
 define("HOME_PAGE",BASE_URL."index.php");
 define("PRODUCT_PAGE",BASE_URL."products/products.php");

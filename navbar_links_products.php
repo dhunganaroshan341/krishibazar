@@ -6,14 +6,14 @@ define("SETTINGS_PAGE",BASE_URL."settings/settings.php");
 define("ABOUT_PAGE",BASE_URL."about");
 define("HOME_PAGE",BASE_URL."index.php");
 define("PRODUCT_PAGE",BASE_URL."products/products.php");
-define("SIGNUP",BASE_URL."signup/signup.php");
+// define("SIGNUP",BASE_URL."signup/signup.php");
 define("VENDOR_PAGE",BASE_URL."vendor/vendor.php");
 // Initialize an empty array if $links is not set
 $links = [];
 $links = array(
     array(
         'url' => PRODUCT_PAGE, // Replace with the URL for your products page
-        'name' => 'Products'
+        'name' => 'FarmerProducts'
     ),
     array(
         'url' => HOME_PAGE, // Replace with the URL for your home page

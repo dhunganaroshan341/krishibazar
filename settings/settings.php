@@ -1,3 +1,18 @@
+
+<?php 
+        include_once "../super_path.php";
+        include_once "../path.php";
+
+        if (!include_once SESSION_MANAGER){
+          die ("NOT INCLUDED");
+        }
+        else{
+          $sessionobj = new SessionManager;
+        $sessionobj->startSession();
+
+          $sessionLogged=$sessionobj->isLoggedIn();
+        }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +25,31 @@
 
   <!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="../index.php">Krishibazar</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="">Settings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#help">Help</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#signin">Sign In</a>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.php">Krishibazar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#help">Help</a>
+                </li>
+                <li class="nav-item">
+             
+        <?php 
+    if ($sessionLogged) {
+        // If user is logged in, display logout link
+        echo '<a class="nav-link" href="../database/logout_process.php">logout</a>';
+    } else {
+        // If user is not logged in, display signup link
+        echo '<a class="nav-link" id = "signInLink">New signin</a>';
+    }
+    ?>
+          
         </li>
       </ul>
     </div>
@@ -28,20 +57,10 @@
 
   <div class="container mt-5">
     <!-- Sign In Section -->
-    <section id="signin" class="mb-4">
-      <h2>Sign In</h2>
-      <form>
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary">Sign In</button>
-      </form>
-    </section>
+   <?php if(!$sessionLogged ){include_once LOGIN ;}
+   
+   echo "welcome ".$sessionobj->isLoggedIN();
+   ?>
 
     <!-- Settings Section -->
     <section id="settings" class="mb-4">
@@ -95,5 +114,24 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+        <script>
+              function goBack() {
+
+                  window.history.back();
+              }
+          </script>
+
+  <!-- <script>
+     $(document).ready(function() {
+            // Redirect to element with class "show" when the sign-in link or button is clicked
+            $('#signInLink').click(function(e) {
+                e.preventDefault(); // Prevent the default behavior of the link or button
+
+                // Redirect to the element with class "show"
+              // $('#loginlink').style.display= "none";
+            });
+        });
+  </script> -->
 </body>
 </html>

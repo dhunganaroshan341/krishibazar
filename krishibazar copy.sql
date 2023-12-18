@@ -37,7 +37,7 @@ CREATE TABLE `buyer_categories` (
 --
 -- Table structure for table `dairy_meat_products`
 --
-
+  
 CREATE TABLE `dairy_meat_products` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,

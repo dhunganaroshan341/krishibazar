@@ -1,0 +1,6 @@
+Folder information
+the componenets folder containes all the componenets that can be reused
+the config folder has db connecetoin
+index.php is entry point of our application
+ we have farmer,home,products,settings, signup for different navbar items, where we have corresponding navbarelement.php files 
+media containes images and other stuffs

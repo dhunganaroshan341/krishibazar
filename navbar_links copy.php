@@ -1,3 +1,8 @@
+
+
+
+
+
 <?php
 define ("BASE_URL","/krishibazar/");
 define("FARMER_PAGE",BASE_URL."farmer/farmer.php");

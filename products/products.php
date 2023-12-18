@@ -1,6 +1,6 @@
 <?php
 include_once "../path.php";
-
+include_once "../super_path.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +17,7 @@ include_once "../path.php";
 <?php
 include_once "../navbar_links_products.php";
 include_once COMPONENTS."/navbar.php";
+include_once FILTER;
 
 
 ?>"
